@@ -1,0 +1,14 @@
+ [Unit]
+ Description=Prometheus to Unicornhat HD
+ After=multi-user.target
+
+[Service]
+Type=idle
+WorkingDirectory=/opt/homestuff/prom2unicornhathd
+ExecStart=/opt/homestuff/prom2unicornhathd/main.py
+User=spetsnaz
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
